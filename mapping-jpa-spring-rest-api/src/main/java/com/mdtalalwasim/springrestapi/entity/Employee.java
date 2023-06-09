@@ -27,11 +27,13 @@ public class Employee {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String name;
-	
-	@JoinColumn(name = "department_id")
-	@OneToOne 
-	private Department department;
+	private String name; 
+
+	//the below code is for (One to One) Relationship for Employee and Department 
+//	//one to one mapping
+//	@JoinColumn(name = "department_id")
+//	@OneToOne 
+//	private Department department; 
 
 
 	public Employee(EmployeeRequest request) {
