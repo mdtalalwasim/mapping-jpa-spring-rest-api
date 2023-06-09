@@ -85,6 +85,12 @@ public class EmployeeController {
 		return new ResponseEntity<HttpStatus>(HttpStatus.NO_CONTENT);
 	}
 	
+	@GetMapping("/employeesByDepartment") 
+	public ResponseEntity<List<Employee>> getEmployeeByDepartment(@RequestParam String name) {
+		
+		//return new ResponseEntity<List<Employee>>(employeeService.findByDepartmentName(name), HttpStatus.OK);//implemented in JPA-Finder-Method
+		return new ResponseEntity<List<Employee>>(employeeService.getEmployeeByDepartment(name), HttpStatus.OK);//implemented in JPQL
+	}
 
 
 }

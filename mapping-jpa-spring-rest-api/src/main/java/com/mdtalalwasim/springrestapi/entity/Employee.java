@@ -11,6 +11,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -19,6 +20,7 @@ import lombok.ToString;
 @ToString	
 @Entity
 @Table(name = "employee")
+@NoArgsConstructor
 public class Employee {
 	
 	@Id
@@ -31,9 +33,11 @@ public class Employee {
 	@OneToOne 
 	private Department department;
 
+
 	public Employee(EmployeeRequest request) {
 		this.name = request.getName();
 	}
+
 	
 	
 	
