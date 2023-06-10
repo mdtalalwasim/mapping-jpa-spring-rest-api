@@ -61,19 +61,26 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
 	
-	//Commented portion of code was implemented for (One To One) Relationship between Employee And Department
-//	@Override
-//	public List<Employee> findByDepartmentName(String name) {
-//		return employeeRepository.findByDepartmentName(name);
-//	}
-//
-//
-//	@Override
-//	public List<Employee> getEmployeeByDepartment(String name) {
-//		// TODO Auto-generated method stub
-//		return employeeRepository.getEmployeeByDepartment(name);
-//	}
-	//Above, Commented portion of code was implemented for (One To One) Relationship between Employee And Department
+	////Commented portion of code was implemented for (One To One) Relationship between Employee And Department
+	@Override
+	public List<Employee> findByDepartmentName(String name) {
+		return employeeRepository.findByDepartmentName(name);
+	}
+
+
+	@Override
+	public List<Employee> getEmployeeByDepartment(String name) {
+		// TODO Auto-generated method stub
+		return employeeRepository.getEmployeeByDepartment(name);
+	}
+	////Above, Commented portion of code was implemented for (One To One) Relationship between Employee And Department
+
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return employeeRepository.findAll();
+	}
 
 
 

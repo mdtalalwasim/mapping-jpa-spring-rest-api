@@ -30,10 +30,10 @@ public class Employee {
 	private String name; 
 
 	//the below code is for (One to One) Relationship for Employee and Department 
-//	//one to one mapping
-//	@JoinColumn(name = "department_id")
-//	@OneToOne 
-//	private Department department; 
+	//one to one mapping
+	@JoinColumn(name = "department_id")
+	@OneToOne 
+	private Department department; 
 
 
 	public Employee(EmployeeRequest request) {
