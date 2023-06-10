@@ -13,9 +13,9 @@ public class EmployeeRequest{
 	
 	private String name;
 	
-	private String department; //for One to One Mapping
+	//private String department; //for One to One Mapping
 	
-	//private List<String> department;//for Many to One Mapping
+	private List<String> department;//for Many to One Mapping
 	
 	
 }

@@ -1,5 +1,7 @@
 package com.mdtalalwasim.springrestapi.response;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,6 +15,8 @@ public class EmployeeResponse {
 	
 	private String employeeName;
 	
-	private String departmentName;
+	//private String departmentName;
+	
+	private List<String> departmentName;//for One to Many Bi-Directional
 
 }

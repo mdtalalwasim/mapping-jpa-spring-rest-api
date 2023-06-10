@@ -25,15 +25,15 @@ public class Department {
 	
 	private String name;  
 	
-//	//To understand (Many to One)-Relationship 
-//	//Many to One -> Many Departments can belong to Single Employee / A Single Employee can have many departments. 
-//	@ManyToOne
-//	@JoinColumn(name = "employee_id")
-//	private Employee employee;
-//	//Many to One -> Many Departments can belong to Single Employee. 
-	
-	
-	//for One to One Bi-Directional
-	@OneToOne(mappedBy = "department")
+	//To understand (Many to One)-Relationship 
+	//Many to One -> Many Departments can belong to Single Employee / A Single Employee can have many departments. 
+	@ManyToOne
+	@JoinColumn(name = "employee_id")
 	private Employee employee;
+	//Many to One -> Many Departments can belong to Single Employee. 
+	
+	
+//	//for One to One Bi-Directional
+//	@OneToOne(mappedBy = "department")
+//	private Employee employee;
 }

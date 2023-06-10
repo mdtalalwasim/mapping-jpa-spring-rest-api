@@ -20,10 +20,10 @@ public interface EmployeeService {
 	Employee updateEmployee(Employee employee);
 	
 	
-	//Commented portion of code was implemented for (One To One) Relationship between Employee And Department
-	List<Employee> findByDepartmentName(String name);
-	List<Employee> getEmployeeByDepartment(String name);
-	//Above, Commented portion of code was implemented for (One To One) Relationship between Employee And Department
+//	//Commented portion of code was implemented for (One To One) Relationship between Employee And Department
+//	List<Employee> findByDepartmentName(String name);
+//	List<Employee> getEmployeeByDepartment(String name);
+//	//Above, Commented portion of code was implemented for (One To One) Relationship between Employee And Department
 
 	List<Employee> getAllEmployees();
 	

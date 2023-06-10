@@ -1,5 +1,7 @@
 package com.mdtalalwasim.springrestapi.entity;
 
+import java.util.List;
+
 import com.mdtalalwasim.springrestapi.request.EmployeeRequest;
 
 import jakarta.persistence.Entity;
@@ -29,13 +31,17 @@ public class Employee {
 	
 	private String name; 
 
-	//the below code is for (One to One) Relationship for Employee and Department 
-	//one to one mapping
-	@JoinColumn(name = "department_id")
-	@OneToOne 
-	private Department department; 
+//	//the below code is for (One to One) Relationship for Employee and Department 
+//	//one to one mapping
+//	@JoinColumn(name = "department_id")
+//	@OneToOne 
+//	private Department department; 
+//	//the Above code is for (One to One) Relationship for Employee and Department
 
-
+	//for One to Many, Single Employee belongs to multiple department.
+	@OneToMany(mappedBy = "employee")
+	private List<Department> departments;
+	
 	public Employee(EmployeeRequest request) {
 		this.name = request.getName();
 	}
